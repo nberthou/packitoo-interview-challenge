@@ -45,7 +45,7 @@ const BriefForm = ({getProducts, products}: BriefFormProps) => {
                                 <option value={product.id}>{product.name}</option>
                             ))}
                         </select>
-                        <button type="submit">Submit</button>
+                        <button type="submit">Submit!</button>
                     </form>
                 )}
             </Formik>
