@@ -1,7 +1,7 @@
 import { all } from 'redux-saga/effects';
 import { watchGetProducts } from './products'
-import { watchCreateBrief } from "./briefs";
+import { watchCreateBrief, watchGetBriefs } from "./briefs";
 
 export default function* saga() {
-    yield all([watchGetProducts(), watchCreateBrief()])
+    yield all([watchGetProducts(), watchCreateBrief(), watchGetBriefs()])
 }

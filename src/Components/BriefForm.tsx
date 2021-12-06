@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { connect } from "react-redux";
-import { Dispatch, } from "redux";
+import { Dispatch } from "redux";
 import { Formik } from "formik";
 
 import store from "../store";

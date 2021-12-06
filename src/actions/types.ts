@@ -5,6 +5,8 @@ export const GET_ASYNC_PRODUCTS = 'GET_ASYNC_PRODUCTS';
 // Briefs
 export const CREATE_BRIEF = 'CREATE_BRIEF';
 export const CREATE_ASYNC_BRIEF = 'CREATE_ASYNC_BRIEF';
+export const GET_BRIEFS = 'GET_BRIEFS';
+export const GET_ASYNC_BRIEFS = 'GET_ASYNC_BRIEFS';
 
 // Error
 export const FETCHING_ERROR = 'FETCHING_ERROR';
