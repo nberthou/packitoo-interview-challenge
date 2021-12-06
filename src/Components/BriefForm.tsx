@@ -4,14 +4,15 @@ import { Dispatch, } from "redux";
 import { Formik } from "formik";
 
 import store from "../store";
-import { GET_ASYNC_PRODUCTS } from "../actions/types";
+import {CREATE_ASYNC_BRIEF, GET_ASYNC_PRODUCTS} from "../actions/types";
 
 type BriefFormProps = {
     getProducts: any;
-    products: Array<{id: number; name: string }>
+    products: Array<{id: number; name: string }>;
+    createBrief: any;
 }
 
-const BriefForm = ({getProducts, products}: BriefFormProps) => {
+const BriefForm = ({getProducts, products, createBrief}: BriefFormProps) => {
     const [title, setTitle] = useState<string>('');
     const [comment, setComment] = useState<string>('');
     const [productId, setProductId] = useState<number>(1);
@@ -24,6 +25,7 @@ const BriefForm = ({getProducts, products}: BriefFormProps) => {
         <div>
             <h1>Brief form</h1>
             <Formik initialValues={{title, comment, productId}} onSubmit={(values, {setSubmitting}) => {
+                createBrief({title, comment, productId})
                 setSubmitting(false);
             }}>
                 {({
@@ -59,6 +61,7 @@ const mapStateToProps = (state: any) => ({
 
 const mapDispatchToProps = (dispatch: Dispatch) => ({
     getProducts: () => dispatch({type: GET_ASYNC_PRODUCTS}),
+    createBrief: (payload: any) => dispatch({type: CREATE_ASYNC_BRIEF, payload})
 })
 
 export default connect(mapStateToProps, mapDispatchToProps)(BriefForm);

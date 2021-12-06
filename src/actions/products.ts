@@ -1,6 +1,5 @@
 import axios from "axios";
 import { call, put, takeLatest } from 'redux-saga/effects';
-import store from "../store";
 
 import { GET_PRODUCTS, GET_ASYNC_PRODUCTS, FETCHING_ERROR } from "./types";
 
@@ -11,14 +10,13 @@ const fetchProducts = () => {
     });
 }
 
-function* getProducts() {
+function* getProducts(): any {
     try {
-        // @ts-ignore
         const response = yield call(fetchProducts);
         const products = response.data;
-        yield put({type: GET_PRODUCTS, products: [...products]});
+        yield put({type: GET_PRODUCTS, products});
     } catch (error) {
-        yield put({type: FETCHING_ERROR})
+        yield put({type: FETCHING_ERROR, error})
     }
 }
 
