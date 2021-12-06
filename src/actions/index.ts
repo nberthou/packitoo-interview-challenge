@@ -1,5 +1,6 @@
-import { call, put, takeEvery } from 'redux-saga/effects';
+import { call, put, takeEvery, all } from 'redux-saga/effects';
+import { watchGetProducts } from './products'
 
-function* saga() {}
-
-export default saga()
+export default function* saga() {
+    yield all([watchGetProducts()])
+}
