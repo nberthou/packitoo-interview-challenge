@@ -30,7 +30,7 @@ const BriefList = ({getBriefs, briefs, products, selectProduct, selectedProduct}
     return <div>
         <h1>List</h1>
 
-        <h2>Select by product</h2>B
+        <h2>Select by product</h2>
         <div>
             <select onChange={e => selectProduct(parseInt(e.target.value, 10))} value={selectedProduct}>
                 <option value={'null'}>Select a product</option>
