@@ -1,3 +1,13 @@
+# Start the app
+
+## Start the DB server
+
+`yarn start:server`
+
+## Start the app
+
+`yarn start`
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
