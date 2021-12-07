@@ -3,7 +3,6 @@ import { connect } from "react-redux";
 import { Dispatch } from "redux";
 import { Formik } from "formik";
 
-import store from "../store";
 import {CREATE_ASYNC_BRIEF, GET_ASYNC_PRODUCTS} from "../actions/types";
 
 type BriefFormProps = {
@@ -19,7 +18,7 @@ const BriefForm = ({getProducts, products, createBrief}: BriefFormProps) => {
 
     useEffect(() => {
         getProducts();
-    }, []);
+    });
 
     return (
         <div>

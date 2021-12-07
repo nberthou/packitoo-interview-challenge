@@ -1,6 +1,8 @@
 // Products
 export const GET_PRODUCTS = 'GET_PRODUCTS';
 export const GET_ASYNC_PRODUCTS = 'GET_ASYNC_PRODUCTS';
+export const SELECT_PRODUCT = 'SELECT_PRODUCT';
+export const SELECT_ASYNC_PRODUCT = 'SELECT_ASYNC_PRODUCT'
 
 // Briefs
 export const CREATE_BRIEF = 'CREATE_BRIEF';

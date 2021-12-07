@@ -11,6 +11,12 @@
       "title": "Beautiful bag Box",
       "comment": "Beautiful bag Box with a cord",
       "productId": 1
+    },
+    {
+      "title": "Test creation",
+      "comment": "This is a test",
+      "productId": 4,
+      "id": 3
     }
   ],
   "products": [
